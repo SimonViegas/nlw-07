@@ -1,21 +1,23 @@
 import { Router } from "express";
+import { AuthenticateUserController } from "./src/controler/AuthenticateUserController";
 
 const router = Router();
 
+router.post("/authenticate", new AuthenticateUserController().handle);
+
 router.get("/github", (request, response) => {
-  console.log("accessed route /github");
-  console.log(`sending ${process.env.GITHUB_CLIENT_ID} to GitHub`);
+  console.log("route | /github");
+  console.log(`route | Sending ${process.env.GITHUB_CLIENT_ID} to GitHub`);
    response.redirect(
     `https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIENT_ID}`)
 })
 
 router.get("/signin/callback", (request, response) => {
-  console.log("accessed route /signin/callback");
+  console.log("route | /signin/callback");
   const { code } = request.query;
 
-  console.log(`returning ${code} to browser`);
+  console.log(`route | Returning ${code} to browser`);
   return response.json(code);
 })
-
 
 export { router };
