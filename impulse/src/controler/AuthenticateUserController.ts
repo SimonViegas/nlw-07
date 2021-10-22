@@ -8,10 +8,15 @@ class AuthenticateUserController {
      
     console.log("AuthenticateUserController | Running execute()");
     const service = new AuthenticateUserService();
-    const result  = await service.execute(code);
+    try {
+      const result  = await service.execute(code);
+      
+      console.log("AuthenticateUserController | Returning result");
+      return response.json(result);
 
-    console.log("AuthenticateUserController | Returning result");
-    return response.json(result);
+    } catch (err)  {
+      return response.json(err);
+    }
   }
 }
 
