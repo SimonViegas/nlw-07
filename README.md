@@ -1,6 +1,11 @@
 git clone https://github.com/SimonViegas/nlw-07.git
 
-0.1.1
+
+0.1.3
+# movido projeto para pasta server
+# adicionado .env no gitignore
+
+0.1.2
 # adicionado socket
 yarn add socket.io
 yarn add -D @types/socket.io
