@@ -1,6 +1,16 @@
 git clone https://github.com/SimonViegas/nlw-07.git
 
 0.1.1
+# adicionado socket
+yarn add socket.io
+yarn add -D @types/socket.io
+# adicionado serviço retornar 3 últimas mensagens
+
+# adicionado cors para barrar ou liberar conexões
+yarn add cors
+yarn add -D @types/cors
+
+0.1.1
 # adicionado model user
 yarn prisma migrate dev //para converte de modo para sql
 yarn add -D @prisma/client

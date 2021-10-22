@@ -1,11 +1,25 @@
 import "dotenv/config";
 import express from "express";
+import http from "http";
+import cors from "cors"
 import { router } from "../routes";
+import { Server } from "socket.io";
 
 const app = express();
-const port = 4000
+app.use(cors());
+
+const serverHttp = http.createServer(app);
+const io = new Server(serverHttp, {
+  cors: {
+    origin: "*",
+  }
+});
+
+io.on("connection", socket => {
+  console.log(`Usuário conectadono socket ${socket.id}`)
+});
 
 app.use(express.json());
 app.use(router);
 
-app.listen(port, () => console.log(`app | 🚀 Server is runnig on PORT ${port}`))
+export { serverHttp, io }
