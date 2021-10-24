@@ -1,5 +1,8 @@
 git clone https://github.com/SimonViegas/nlw-07.git
 
+0.3.1
+# web | integrando backend com a aplicação
+
 0.2.2
 # web | adicionado tela MessageList
 
