@@ -1,6 +1,12 @@
 git clone https://github.com/SimonViegas/nlw-07.git
+0.2.8
+# web | configuração para logout
+
+0.2.7 
+# web | configurado scss do SendMessageForm
+
 0.2.6
-# adicionado componente SendMessageForm
+# web | adicionado componente SendMessageForm
 
 0.2.5
 # web | refatorado autenticação do LoginBox para o auth.tsx

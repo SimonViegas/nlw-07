@@ -22,7 +22,7 @@ type User = {
 type AuthContextData = {
   user: User | null
   singInUrl: string
-  singOut: () => void
+  signOut: () => void
 }
 
 type AuthProvider = {
@@ -49,7 +49,7 @@ export function AuthProvider(props: AuthProvider) {
     setUser(user)
   }
 
-  async function singOut() {
+  async function signOut() {
     setUser(null)
     localStorage.removeItem('@dowhile:token')
   }
@@ -82,7 +82,7 @@ export function AuthProvider(props: AuthProvider) {
   }, [])
 
   return (
-    <AuthContext.Provider value={{ singInUrl, user, singOut }}>
+    <AuthContext.Provider value={{ singInUrl, user, signOut }}>
       {props.children}
     </AuthContext.Provider>
   )
