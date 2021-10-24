@@ -1,46 +1,13 @@
-import { useEffect } from 'react'
+import { useContext } from 'react'
 import { VscGithubInverted } from 'react-icons/vsc'
-import { api } from '../../server/api'
+import { AuthContext } from '../../contexts/auth'
+
 import styles from './styles.module.scss'
 
-type AuthResponse = {
-  token: string
-  user: {
-    id: string
-    avatar_url: string
-    name: string
-    login: string
-  }
-}
-
 export function LoginBox() {
-  const singInUrl = `https://github.com/login/oauth/authorize?scope=user&client_id=ee5760b40bc9e9f7638c`
+  const { singInUrl, user } = useContext(AuthContext)
 
-  useEffect(() => {
-    const url = window.location.href
-    const hasGithubCode = url.includes('?code=')
-
-    async function singIn(githubCode: string) {
-      const response = await api.post<AuthResponse>('authenticate', {
-        code: githubCode
-      })
-
-      const { token, user } = response.data
-
-      localStorage.setItem('@dowhile:token', token)
-
-      console.log(user)
-    }
-
-    if (hasGithubCode) {
-      const [urlWithoutCode, githubCode] = url.split('?code=')
-      console.log({ urlWithoutCode, githubCode })
-
-      window.history.pushState({}, '', urlWithoutCode)
-
-      singIn(githubCode)
-    }
-  }, [])
+  console.log(user)
 
   return (
     <div className={styles.loginBoxWrapper}>

@@ -1,5 +1,11 @@
 git clone https://github.com/SimonViegas/nlw-07.git
 
+0.3.2
+refatorado autenticação do LoginBox para o auth.tsx
+
+0.3.2
+# adicionado context api
+
 0.3.1
 # web | integrando backend com a aplicação
 
