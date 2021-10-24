@@ -1,7 +1,12 @@
-function App() {
+import styles from './App.module.css';
+import { MessageList } from './components/MessageList';
+import { LoginBox } from './components/LoginBox';
+
+export function App() {
   return (
-    <h1>Hello World</h1>
+   <main className={styles.contentWrapper}>
+     <MessageList></MessageList>
+     <LoginBox></LoginBox>
+   </main>
   )
 }
-
-export default App
