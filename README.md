@@ -1,5 +1,13 @@
 git clone https://github.com/SimonViegas/nlw-07.git
 
+0.2.2
+# web | adicionado tela MessageList
+
+0.2.1
+# web | adicionado tela LoginBox
+
+0.2.0
+# adicionado projeto web via vite
 
 0.1.3
 # movido projeto para pasta server
