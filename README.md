@@ -1,4 +1,11 @@
 git clone https://github.com/SimonViegas/nlw-07.git
+
+0.2.10
+# web | finalizado projeto web
+
+0.2.9
+# web | componente de envio de mensagens e atualização em tempo real
+
 0.2.8
 # web | configuração para logout
 
