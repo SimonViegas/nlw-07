@@ -37,17 +37,20 @@ export function AuthProvider(props: AuthProvider) {
   const singInUrl = `https://github.com/login/oauth/authorize?scope=user&client_id=ee5760b40bc9e9f7638c`
 
   async function singIn(githubCode: string) {
+    console.log('Tentando autenticar')
+
     const response = await api.post<AuthResponse>('authenticate', {
       code: githubCode
     })
 
     const { token, user } = response.data
 
-    localStorage.setItem('@dowhile:token', token)
-
-    api.defaults.headers.common.authorization = `Bearer ${token}`
-
-    setUser(user)
+    if (token) {
+      console.log('Autenticado')
+      localStorage.setItem('@dowhile:token', token)
+      api.defaults.headers.common.authorization = `Bearer ${token}`
+      setUser(user)
+    }
   }
 
   async function signOut() {
@@ -71,12 +74,11 @@ export function AuthProvider(props: AuthProvider) {
   useEffect(() => {
     const url = window.location.href
     const hasGithubCode = url.includes('?code=')
-
     if (hasGithubCode) {
       const [urlWithoutCode, githubCode] = url.split('?code=')
       console.log({ urlWithoutCode, githubCode })
 
-      window.history.pushState({}, '', urlWithoutCode)
+      //window.history.pushState({}, '', urlWithoutCode)
 
       singIn(githubCode)
     }

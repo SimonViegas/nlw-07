@@ -12,6 +12,7 @@ class ProfileUserService {
       }
     })
 
+    console.log('ProfileUserService | ')
     console.log(user)
 
     return user
