@@ -1,4 +1,7 @@
 git clone https://github.com/SimonViegas/nlw-07.git
+0.3.4
+# app | animação com Moti [animation with Moti]
+
 0.3.3
 # app | Configuração das Mensagens e Lista de Mengagens [Configuration of Messages and Message List]
 
