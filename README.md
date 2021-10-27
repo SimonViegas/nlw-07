@@ -1,6 +1,9 @@
 git clone https://github.com/SimonViegas/nlw-07.git
+0.3.3
+# app | Configuração das Mensagens e Lista de Mengagens [Configuration of Messages and Message List]
+
 0.3.2
-# app | Configuração Header, Utilizando svg
+# app | Configuração Header, Utilizando svg [Header Configuration, Using svg]
 
 0.3.1
 # app | alterando tema []
