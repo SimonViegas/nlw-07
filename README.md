@@ -1,6 +1,15 @@
 git clone https://github.com/SimonViegas/nlw-07.git
+0.3.2
+# app | Configuração Header, Utilizando svg
 
-0.3.0 -
+0.3.1
+# app | alterando tema []
+
+0.3.1
+# app | fonte personalizada [configured custom font]
+
+
+0.3.0
 # app | criado projeto inicial com algumas configurações
 
 0.2.10
