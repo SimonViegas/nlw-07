@@ -1,4 +1,7 @@
 git clone https://github.com/SimonViegas/nlw-07.git
+0.3.5
+# app | tela de login e botão [login screen and button]
+
 0.3.4
 # app | animação com Moti [animation with Moti]
 
