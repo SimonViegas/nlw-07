@@ -1,5 +1,8 @@
 git clone https://github.com/SimonViegas/nlw-07.git
 
+0.3.0 -
+# app | criado projeto inicial com algumas configurações
+
 0.2.10
 # web | finalizado projeto web
 
